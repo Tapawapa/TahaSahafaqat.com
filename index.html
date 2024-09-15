@@ -13,38 +13,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> <!--FONT-->
     
     <script src="https://kit.fontawesome.com/08b066b1c8.js" crossorigin="anonymous"></script><!--ICONS-->
+    
+    <style>
+        /* Default style for the warning message */
+        .mobile-warning {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1><div>Taha Shafaqat</div></h1>
         
-<!--menu icon-->
-    <a href="projectpage.html" target="_self">         <div class="circle">
-        <img  width="33" class="project-icon"  src="ProjectIcon.png" alt="Project icon">
-        </div>
-     </a>
-<!--linkedin icon-->
-    <a href="https://www.linkedin.com/in/taha-s-5171502b1/" target="_blank"> <div class="linkedin-circle">
-        <img width="28" class="linkedin-logo" src="Linkedin Logo.png" alt="Linkedin Logo">
-    </div>
-</a> 
-     <!--github-->
-  <a href="https://github.com/TahaShafaqat" target="_blank">
-    <div class="github-circle">
-        <img class="github-logo" width="30" src="Github Icon.png" alt="Github Icon"></div>
-
-  </a>
-     <!--mail logo-->
-     <a href="mailto:tshafa@uw.edu">
-        <div class="mail-circle">
-            <img width="35"  class="mail-icon" src="Mail Icon.png" alt="Mail Icon">
-        </div>
-    </a>
-    
-
+        <!--menu icon-->
+        <a href="projectpage.html" target="_self">         
+            <div class="circle">
+                <img width="33" class="project-icon" src="ProjectIcon.png" alt="Project icon">
+            </div>
+        </a>
+        <!--linkedin icon-->
+        <a href="https://www.linkedin.com/in/taha-s-5171502b1/" target="_blank"> 
+            <div class="linkedin-circle">
+                <img width="28" class="linkedin-logo" src="Linkedin Logo.png" alt="Linkedin Logo">
+            </div>
+        </a> 
+        <!--github-->
+        <a href="https://github.com/TahaShafaqat" target="_blank">
+            <div class="github-circle">
+                <img class="github-logo" width="30" src="Github Icon.png" alt="Github Icon">
+            </div>
+        </a>
+        <!--mail logo-->
+        <a href="mailto:tshafa@uw.edu">
+            <div class="mail-circle">
+                <img width="35" class="mail-icon" src="Mail Icon.png" alt="Mail Icon">
+            </div>
+        </a>
+        
         <h2><span class="highlight">Aspiring Software Engineer and Cybersecurity Expert</span></h2> <!-- Beginning two texts -->
-      <div class="centered"><span class="quote">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." - Malcolm X</span></div>  
-
+        <div class="centered">
+            <span class="quote">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." - Malcolm X</span>
+        </div>  
     </header>
     <main>
         <p>
@@ -54,7 +73,7 @@
             emerging technologies in this evolving field. Outside of academics, I am actively involved in student clubs such as 
             ACM (Association of Computing Machinery), the GreyHats Cybersecurity club, MSAUWB/S (Muslim Student Association at University of Washington, Bothell/Seattle), 
             and PSAUWB/S (Pakistani Student Association University of Washington, Bothell/Seattle). I also participate in local hackathons.
-             I look forward to gaining and contributing my skills and knowledge through the projects listed on this website and through future internships!
+            I look forward to gaining and contributing my skills and knowledge through the projects listed on this website and through future internships!
         </p>
         <img id="ProfilePic" src="linkedn.png" alt="A portrait">
         <h3>Skills and Tools:</h3>
@@ -63,7 +82,24 @@
         <p class="listText" id="JavaScript"><span class="ST">JavaScript</span></p> 
         <p class="listText" id="HTML"><span class="ST">HTML</span></p> 
         <p class="listText" id="CSS"><span class="ST">CSS</span></p> 
-        <p class="listText" id="JSON"><span class="ST">JSON</span></p> 
-    
+        <p class="listText" id="JSON"><span class="ST">JSON</span></p>
+    </main>
+
+    <!-- Mobile warning script -->
+    <script>
+        // Function to detect mobile devices
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        // Show mobile warning if a mobile device is detected
+        if (isMobileDevice()) {
+            var warning = document.createElement('div');
+            warning.id = 'mobile-warning';
+            warning.className = 'mobile-warning';
+            warning.innerHTML = '<p>This site is currently not optimized for mobile devices. Please visit us on a desktop for the best experience.</p>';
+            document.body.appendChild(warning);
+        }
+    </script>
 </body>
 </html>
