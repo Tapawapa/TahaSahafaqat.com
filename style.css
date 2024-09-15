@@ -34,8 +34,8 @@ h1 {
     border-radius: 50%;
 
     position: fixed;
-    bottom: 840.5px;
-    left: 19.5px;
+    top: 1.6vh;
+    left: 1.5vw;
     
 
 }
@@ -49,8 +49,8 @@ h1 {
     background-color: transparent;
     border-radius: 50%;
     position: fixed;
-    bottom: 840.5px;
-    right: 104.5px;
+    right: 6.62vw;
+    top: 1.62vh;
 
     /* Center the content */
     display: flex;
@@ -67,8 +67,8 @@ h1 {
     border-radius: 50%;
 
     position: fixed;
-    bottom: 840.5px;
-    right: 62.3px;
+    right: 4.050vw;
+    top: 1.55vh;
 
     display: flex;
     align-items: center;
@@ -85,8 +85,8 @@ h1 {
     border-radius: 50%;
 
     position: fixed;
-    bottom: 841px;
-    right: 19.8px;
+    right: 1.51vw;
+    top: 1.6vh;
 
     display: flex;
     align-items: center;
@@ -104,15 +104,14 @@ h2 {
 }
 
 .project-icon{
-   position: fixed;
-    left: 20px;
-    top: 1.5%;
+    position: fixed;
+    left: 1.55vw; /* Use percentage for horizontal positioning */
+    top: 1.62vh; /* Use percentage for vertical positioning */
     z-index: 1;
-    
 }
 .mail-icon{
-    right: 20px;
-    bottom: 841px;
+    right: 1.5vw;
+    top: 1.6vh;
     z-index: 1;
 
    position: fixed;
@@ -123,8 +122,8 @@ h2 {
 
 .back-button{
    position: fixed;
-    left: 19px;
-    bottom: 841.5px;
+   top: 1.6vh;
+   left: 1.5vw;
     z-index: 1;
 }
 .linkedin-logo{
@@ -132,15 +131,15 @@ h2 {
     z-index: 1;
     /* Remove fixed positioning to allow flexbox centering */
     position: fixed;
-    right: 108px;
-    bottom: 844px;
+    right: 6.85vw;
+    top: 2vh;
 
    
     
 }
 .github-logo{
-    right: 65px;
-    bottom: 844px;
+    right: 4.2vw;
+    top: 1.7vh;
     position: fixed;
     z-index: 1;
 
@@ -283,5 +282,20 @@ video {
     border: 5px solid  rgb(19, 18, 18);
     background-color: rgb(19, 18, 18);
     border-radius: 10px;
+    width: 80vw;
     
+}
+@media screen and (max-width: 850px) {
+    .linkedin-logo {
+        right: 12vw;
+    }
+    .linkedin-circle {
+        right:11.55vw;
+    }
+    .github-logo{
+        right:5.9vh;
+    }
+    .github-circle{
+        right:5.66vh;
+    }
 }
