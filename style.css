@@ -322,3 +322,81 @@ video {
         font-size: 20px;
     }
 }
+@media screen and (max-width:500px) {
+    h1{
+        font-size: 25px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    .project-icon{
+        font-size: 17px;
+        top: 3.5vh;
+        left:4.5vw;
+    }
+    .linkedin-logo{
+        font-size: 20px;
+        top: 3.2vh;
+        right: 17vw;
+    }
+    .github-logo{
+        font-size: 20px;
+        top:2.9vh;
+        right: 9.6vw;
+    }
+    .mail-icon{
+        font-size: 19px;
+        top:3.2vh;
+    }
+    .back-button{
+        font-size: 22px;
+        top: 3vh;
+        left:4.5vw;
+    }
+    h2{
+        font-size: 20px ;
+    }
+
+    .quote{
+        font-size: 15px;
+    }
+    p{
+        font-size: 12px;
+    }
+    img{
+        width: 300px;
+    }
+}
+@media screen and (min-height:800px) and (max-height:950px){
+    .project-icon{
+        top: 2.65vh;
+    }
+    .linkedin-logo{
+        top: 2.55vh;
+    }
+    .github-logo{
+        top: 2.4vh;
+    }
+    .mail-icon{
+        top: 2.55vh;
+    }
+    .back-button{
+        top: 2.3vh;
+    }
+}
+@media screen and (min-height:1000px) and (max-height:1370px){
+    .project-icon{
+    top: 1.5vh;
+    }
+    .linkedin-logo{
+    top:1.5vh;
+    }
+    .github-logo{
+        top: 1.4vh;
+    }
+    .mail-icon{
+        top: 1.55vh;
+    }
+    .back-button{
+        top: 1.2vh;
+    }
+}
