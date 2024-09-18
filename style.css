@@ -80,7 +80,7 @@ h2 {
     z-index: 1;
     /* Remove fixed positioning to allow flexbox centering */
     position: fixed;
-    right: 6.95vw;
+    right: 6.925vw;
     top: 2.1vh;
     color: #FFFACD;
     font-size: 26px;
@@ -243,9 +243,10 @@ video {
     width: 80vw;
     
 }
+
 @media screen and (max-width: 1080px){
    .linkedin-logo{
-    right: 10vw;
+    right: 9.8vw;
 
    } 
    .github-logo{
@@ -274,7 +275,7 @@ video {
     }
     .linkedin-logo{
         top:2.2vh;
-        right: 12.5vw;
+        right: 12.625vw;
     }
     .mail-icon{
         top:2.2vh;
@@ -307,7 +308,7 @@ video {
     .linkedin-logo{
         font-size: 23px;
         top:1.35vh;
-        right:15vw
+        right:14.62vw
         
     }
     .back-button{
