@@ -285,6 +285,8 @@ video {
 @media screen and (max-width:600px){
     h1{
         font-size: 35px;
+                padding-bottom: 15px;
+        padding-top: 15px;
     }
     
     .project-icon{
@@ -297,7 +299,7 @@ video {
     }
     .mail-icon{
         font-size: 22px;
-        top: 1.3vh;
+        top: 1.5vh;
         right: 2.5vw;
     }
     .github-logo{
@@ -374,7 +376,7 @@ video {
         top: 2.55vh;
     }
     .github-logo{
-        top: 2.45vh;
+        top: 2.4vh;
     }
     .mail-icon{
         top: 2.55vh;
