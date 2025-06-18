@@ -1,404 +1,216 @@
 body {
-    background-image: url(background.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    font-family: "Roboto";
-
-    padding-top: 60px;
-
-    
+    background-color: #1A281F; /* Dark, desaturated forest green */
+    /* ADJUSTMENT: Fixed the SVG path to remove the "splotch" at the bottom of the mountains. */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 200 100'%3e%3cg%3e%3cpath d='M0 90 L20 75 L40 90 L55 70 L75 90 L85 80 L100 90' stroke='rgba(234, 231, 220, 0.08)' stroke-width='1.5' fill='none'/%3e%3c/g%3e%3cg transform='translate(100 0)'%3e%3cpath d='M50 2 L60 25 L55 25 L65 50 L60 50 L70 70 L65 70 L75 95 L25 95 L35 70 L30 70 L40 50 L35 50 L45 25 L40 25 Z' stroke='rgba(234, 231, 220, 0.08)' stroke-width='1.5' fill='none'/%3e%3c/g%3e%3c/svg%3e");
+    font-family: "Roboto", sans-serif;
+    color: #EAE7DC; /* Warm, parchment-like color for text */
+    padding-top: 80px;
+    margin: 0;
 }
 
 h1 {
-    color: lemonchiffon;
-    background-color: rgb(19, 18, 18);
-    border-radius: 0px;
-   
+    color: #ffffff;
+    background-color: #24382C;
     font-size: 50px;
     text-align: center;
-    margin: 0px;
-    padding-bottom: 3px;
-
+    margin: 0;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-  
+    z-index: 1000;
+    border-bottom: 1px solid #5C4033;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    color: lemonchiffon;
+    color: #ffffff;
     font-size: 33px;
     text-align: center;
-    
 }
 
-.project-icon{
+.project-icon,
+.mail-icon,
+.back-button,
+.linkedin-logo,
+.github-logo {
+    color: #EAE7DC;
+    font-size: 25px;
     position: fixed;
-    left: 2vw; /* Use percentage for horizontal positioning */
-    top: 2.3vh; /* Use percentage for vertical positioning */
-    color: #FFFACD;
-    font-size: 23px;
-}
-.project-icon:hover{
-    color: grey;
-    transform: scale(1.2);
+    top: 28px;
+    z-index: 1001;
+    transition: color 0.3s, transform 0.3s;
 }
 
-
-.mail-icon{
-    right: 1.5vw;
-    top: 2.1vh;
-    z-index: 1;
-    color: #FFFACD;
-
-   position: fixed;
-   font-size: 25px;
-
-   
-    
-}
-.mail-icon:hover{
-    color: grey;
-    transform: scale(1.2);
-}
-.back-button{
-   position: fixed;
-   top: 1.9vh;
-   left: 2.0vw;
-   font-size: 31px;
-   color: #FFFACD;
-}
-.back-button:hover{
-    color: grey;
-    transform: scale(1.2);
+.project-icon:hover,
+.mail-icon:hover,
+.back-button:hover,
+.linkedin-logo:hover,
+.github-logo:hover {
+    color: #5C4033;
+    transform: scale(1.1);
 }
 
-.linkedin-logo{
-    z-index: 1;
-    /* Remove fixed positioning to allow flexbox centering */
-    position: fixed;
-    right: 6.925vw;
-    top: 2.1vh;
-    color: #FFFACD;
-    font-size: 26px;
-}
-.linkedin-logo:hover{
-    color: grey;
-    transform: scale(1.2);
-}
-.github-logo{
-    right: 4.2vw;
-    top: 1.92vh;
-    position: fixed;
-    z-index: 1;
-    color: #FFFACD;
-    font-size: 26px;
+.project-icon { left: 2vw; }
+.back-button { left: 2vw; font-size: 31px; }
+.mail-icon { right: 1.5vw; }
+.linkedin-logo { right: 6.925vw; }
+.github-logo { right: 4.2vw; }
 
-    transform: translateY(1px);
-}
-.github-logo:hover{
-    color: grey;
-    transform: scale(1.2);
-}
+
 .highlight {
-    background-color: rgb(19, 18, 18);
-    padding: 5px 20px;
-    display: inline-block;
+    color: #EAE7DC;
+    background-color: transparent;
+    padding: 5px 10px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
 .quote {
-    background-color: rgb(19, 18, 18);
-    color: lemonchiffon;
+    background-color: #24382C;
+    color: #EAE7DC;
     font-size: 20px;
-    padding: 10px; /* Adjust padding as needed */
+    padding: 20px;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
-    margin: 0 auto;
-    
-} 
-.centered{
-    width: 100%; /* Ensure the container takes full width */
-    text-align: center; /* Center align the contents */
-    /* Adjust margin as needed */
+    margin: 20px auto;
+    border-left: 4px solid #5C4033;
+    max-width: 80%;
 }
+
+.centered {
+    width: 100%;
+    text-align: center;
+}
+
 h3 {
-    color: lemonchiffon;
-    background-color: rgb(19, 18, 18);
+    color: #ffffff;
     font-size: 27px;
     text-align: center;
-    border-radius: 5px;
-    padding: 7px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 p {
-    color: lemonchiffon;
-    background-color: rgb(19, 18, 18);
+    color: #d1cdc4;
+    background-color: #24382C;
     text-align: center;
-    border-style: solid;
-    border-color: rgb(19, 18, 18);
-    border-radius: 5px;
-    border-width: 3px;
-    padding: 8px;
+    border: 1px solid #5C4033;
+    border-radius: 8px;
+    padding: 20px;
+    line-height: 1.7;
+    margin: 20px;
 }
-p.listText{
-   background-color: transparent;
-   border: none;
+
+p.listText {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
-span.ST{
+
+span.ST {
     display: inline-block;
-    background-color:  rgb(19, 18, 18);
-    border: solid;
-    border-radius: 5px;
-    border-color:  rgb(19, 18, 18);
+    background-color: #2A4032;
+    border: 1px solid #5C4033;
+    border-radius: 8px;
     width: 250px;
-      
-    position: relative;  
-    
-    top: -20px;
-
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
 }
-#Python{
-    position: relative;
 
-    top: -17px;
-}
-#JavaScript{
-    position: relative;
-
-    top: -35px;
-}
-#HTML{
-    position: relative;
-
-    top: -54px;
-}
-#CSS{
-    position: relative;
-
-    top: -70px;
-}
-#JSON{
-    position: relative;
-
-    top: -85px;
-}
 button {
-    background-color: rgb(19, 18, 18);
-    border-radius: 7px;
-    border: 5px solid lemonchiffon;
+    background-color: #C0A75E;
+    border-radius: 8px;
+    border: none;
     width: 250px;
-    height: 100px;
-    color: lemonchiffon;
+    height: 70px;
+    color: #1A281F;
     font-size: 30px;
     font-weight: bold;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    position: relative;
-    bottom: 75px;
-
-
-}
-button:hover{
-    background-color: rgb(255, 250, 205);
-    color: rgb(19, 18, 18);;
-    border-color: rgb(19, 18, 18);; ;
+    margin: 40px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+button:hover {
+    background-color: #ad9655;
+}
 
 #ProfilePic {
-    border-style: solid;
-    border-color: rgb(19, 18, 18);
-    border-radius: 5px;
-    border-width: 5px;
+    border: 3px solid #5C4033;
+    border-radius: 8px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
+    max-width: 100%;
+    height: auto;
 }
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    max-width: 100%;
 }
 
 a {
     text-decoration: none;
+    color: #8F754F; /* Muted brown for links */
 }
-#projectHover:hover{
-    color: gray;
+
+a:hover {
+    color: #5C4033;
 }
+
+a:hover .highlight {
+    background-color: #3E5245;
+}
+
+
 video {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid  rgb(19, 18, 18);
-    background-color: rgb(19, 18, 18);
-    border-radius: 10px;
+    margin: auto;
+    border: 1px solid #5C4033;
+    background-color: #000000;
+    border-radius: 8px;
     width: 80vw;
-    
+    max-width: 800px;
 }
 
-@media screen and (max-width: 1080px){
-   .linkedin-logo{
-    right: 9.8vw;
-
-   } 
-   .github-logo{
-    right: 5.6vw;
-   }
-}
-@media screen and (max-width: 850px) {
-
-    .linkedin-logo {
-        right: 12.3vw;
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 600px) {
+    body {
+        padding-top: 70px;
     }
-    .linkedin-circle {
-        right:11.55vw;
+    main {
+        padding: 0 10px;
     }
-    .github-logo{
-        right:5.9vh;
+    h1 {
+        font-size: 24px;
+        padding: 22px 0;
     }
-    .github-circle{
-        right:5.66vh;
-    }
-
-}
-@media screen and (min-width: 600px) and (max-width: 850px) {
-    .github-logo{
-        right: 7vw;
-    }
-    .linkedin-logo{
-        top:2.2vh;
-        right: 12.625vw;
-    }
-    .mail-icon{
-        top:2.2vh;
-    }
-}
-
-@media screen and (max-width:600px){
-    h1{
-        font-size: 35px;
-                padding-bottom: 15px;
-        padding-top: 15px;
-    }
-    
-    .project-icon{
+    .project-icon, .mail-icon, .back-button, .linkedin-logo, .github-logo {
         font-size: 20px;
-        top: 1.5vh;
+        top: 24px;
+    }
+    .project-icon, .back-button { left: 4vw; }
+    .mail-icon { right: 4vw; }
+    .github-logo { right: 12vw; }
+    .linkedin-logo { right: 20vw; }
 
-        left: 2.1vw;
-    
-        
+    h2 {
+        font-size: 24px;
     }
-    .mail-icon{
-        font-size: 22px;
-        top: 1.5vh;
-        right: 2.5vw;
-    }
-    .github-logo{
-        font-size: 23px;
-        top: 1.1vh;
-        right: 8.5vw;
-    }
-    .linkedin-logo{
-        font-size: 23px;
-        top:1.35vh;
-        right:14.62vw
-        
-    }
-    .back-button{
-        font-size: 25px  ;
-        top:1.1vh;
-    }
-    h2{
-        font-size: 25px;
-    }
-    h3{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width:500px) {
-    h1{
-        font-size: 25px;
-        padding-bottom: 15px;
-        padding-top: 15px;
-    }
-    .project-icon{
-        font-size: 17px;
-        top: 3.5vh;
-        left:4.5vw;
-    }
-    .linkedin-logo{
-        font-size: 20px;
-        top: 3.2vh;
-        right: 17vw;
-    }
-    .github-logo{
-        font-size: 20px;
-        top:2.9vh;
-        right: 9.6vw;
-    }
-    .mail-icon{
-        font-size: 19px;
-        top:3.2vh;
-    }
-    .back-button{
-        font-size: 22px;
-        top: 3vh;
-        left:4.5vw;
-    }
-    h2{
-        font-size: 20px ;
-    }
-
-    .quote{
+    p {
         font-size: 15px;
+        margin: 15px;
     }
-    p{
-        font-size: 12px;
-    }
-    img{
-        width: 300px;
-    }
-}
-@media screen and (min-height:800px) and (max-height:950px){
-    .project-icon{
-        top: 2.65vh;
-    }
-    .linkedin-logo{
-        top: 2.55vh;
-    }
-    .github-logo{
-        top: 2.4vh;
-    }
-    .mail-icon{
-        top: 2.55vh;
-    }
-    .back-button{
-        top: 2.3vh;
-    }
-}
-@media screen and (min-height:1000px) and (max-height:1370px){
-    .project-icon{
-    top: 1.5vh;
-    }
-    .linkedin-logo{
-    top:1.5vh;
-    }
-    .github-logo{
-        top: 1.4vh;
-    }
-    .mail-icon{
-        top: 1.55vh;
-    }
-    .back-button{
-        top: 1.2vh;
+    span.ST, button {
+        width: 90%;
     }
 }
