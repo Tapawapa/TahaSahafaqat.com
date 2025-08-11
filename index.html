@@ -38,16 +38,16 @@
                 <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
             </a></li>
             <li><a href="#about" data-section="about" class="nav-link group" title="About">
-                 <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
+                <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
             </a></li>
             <li><a href="#experience" data-section="experience" class="nav-link group" title="Experience">
-                 <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
+                <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
             </a></li>
             <li><a href="#projects" data-section="projects" class="nav-link group" title="Projects">
-                 <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
+                <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
             </a></li>
             <li><a href="#skills" data-section="skills" class="nav-link group" title="Skills">
-                 <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
+                <span class="nav-dot block w-3 h-3 bg-green-300 rounded-full group-hover:bg-white transition-all duration-300"></span>
             </a></li>
         </ul>
     </nav>
@@ -55,7 +55,7 @@
     <!-- Mobile Header -->
     <!-- Updated with background transparency and backdrop blur -->
     <header class="lg:hidden bg-green-900/75 backdrop-blur-md text-white p-4 text-center sticky top-0 z-50">
-         <h1 class="text-xl font-bold">Taha Shafaqat</h1>
+        <h1 class="text-xl font-bold">Taha Shafaqat</h1>
     </header>
 
     <!-- This container now has left padding on large screens to account for the nav bar -->
@@ -77,7 +77,7 @@
                   I am an Economics and Computer Science double major at the University of Washington Bothell. I am interested in using programming, economics, and financial mathematics to craft data-informed decisions for businesses, hospitals, government agencies, and nonprofit organizations.
                 </p>
                 <div class="mt-8 flex justify-center gap-4">
-                     <a href="mailto:tshafa@uw.edu" class="bg-green-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-900 transition-colors">Get In Touch</a>
+                    <a href="mailto:tshafa@uw.edu" class="bg-green-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-900 transition-colors">Get In Touch</a>
                 </div>
             </div>
         </section>
@@ -107,7 +107,7 @@
         <section id="projects" class="scroll-section flex items-center justify-center p-8 md:p-16" style="background-color: #f0f4f0;">
              <div class="max-w-5xl w-full">
                 <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Projects</h2>
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <a href="data:application/octet-stream;base64,UEJJWCBmaWxlIGNvbnRlbnQ=" download="MinimumWageReport.pbix" class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <h3 class="text-xl font-bold text-gray-800">Minimum Wage Disparity Project</h3>
                         <p class="text-gray-600 mt-4">Designed a project analyzing the growing disparity between the U.S. minimum wage and the cost of living using a large BLS dataset. Utilized PostgreSQL to clean and format the data and developed a model illustrating how the minimum wage would appear if it had consistently tracked inflation. Incorporated average rent prices and compared them to CPI data to highlight how CPI fails to reflect the true cost of living for most Americans, culminating in data-driven storytelling.</p>
@@ -116,6 +116,11 @@
                     <a href="https://github.com/Tapawapa/Portfolio-Optimization-Risk-Analysis-Project" target="_blank" rel="noopener noreferrer" class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                         <h3 class="text-xl font-bold text-gray-800">Portfolio Optimization & Risk Analysis Project</h3>
                         <p class="text-gray-600 mt-4">Developed a data-driven model to optimize a stock portfolio using 10 years of historical price data from Yahoo Finance. Conducted Monte Carlo simulations with 50,000 portfolio weight combinations to identify allocations maximizing the Sharpe ratio (1.42) while minimizing risk (annualized volatility reduced by 18%). Visualized the efficient frontier to show optimal risk-return tradeoffs and recommended a portfolio mix projected to yield an annualized return of 11.3%.</p>
+                        <span class="inline-block mt-4 text-sm font-semibold text-green-800 group-hover:underline">View on GitHub &rarr;</span>
+                    </a>
+                    <a href="https://github.com/Tapawapa/EV-Charging-Optimization-Forecasting.git" target="_blank" rel="noopener noreferrer" class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-gray-800">EV Charging Infrastructure & Demand Forecasting</h3>
+                        <p class="text-gray-600 mt-4">Built a system to find the best spots for new EV charging stations. This project used Python (Pandas, Scikit-Learn, Prophet) for analysis and forecasting, alongside SQL (PostGIS) for geospatial data. Data was integrated from government APIs and mapping services to ensure a comprehensive analysis. The result is an interactive dashboard that shows high-demand areas to help plan infrastructure spending wisely.</p>
                         <span class="inline-block mt-4 text-sm font-semibold text-green-800 group-hover:underline">View on GitHub &rarr;</span>
                     </a>
                 </div>
@@ -128,7 +133,7 @@
                 <h2 class="text-4xl font-bold text-green-900 mb-12">Core Skills</h2>
                 <div class="flex flex-wrap justify-center gap-4">
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">SQL</span>
-                    <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">Python (Pandas, NumPy, Sckit-Learn, TensorFlow)</span>
+                    <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">Python (Pandas, NumPy, Scikit-Learn, TensorFlow)</span>
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">Statistics</span>
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">PowerBI</span>
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">Tableau</span>
