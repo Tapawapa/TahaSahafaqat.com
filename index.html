@@ -19,27 +19,17 @@
             }
             .scroll-section {
                 scroll-snap-align: start;
-                /* MODIFIED: Use min-height to allow sections to grow */
-                min-height: 100vh;
+                /* Use min-height to allow content to grow */
+                min-height: 100vh; 
             }
-            /* Keep Hero section strictly 100vh */
+            /* Hero is special, we want it to be exactly 100vh */
             #hero.scroll-section {
                 height: 100vh;
-                min-height: auto; /* Override min-height for hero */
             }
         }
         /* Style for the active navigation link */
         .nav-link.active .nav-dot {
             @apply bg-white scale-125;
-        }
-
-        /* NEW: Hide scrollbar but allow scrolling */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none; /* for Chrome, Safari, and Opera */
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* for IE and Edge */
-            scrollbar-width: none;  /* for Firefox */
         }
     </style>
 </head>
@@ -79,8 +69,6 @@
             <div>
                 <h1 class="text-5xl md:text-7xl font-extrabold">Taha Shafaqat</h1>
                 <p class="mt-4 text-xl md:text-2xl text-green-200 font-semibold">Using Data to Empower and Inform Organizations</p>
-                
-                <!-- RESTORED: Social links and closing tags -->
                 <div class="mt-8 flex justify-center items-center gap-6">
                     <a href="https://github.com/Tapawapa" target="_blank" rel="noopener noreferrer" class="text-green-200 hover:text-white transition-colors" title="GitHub">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
@@ -92,7 +80,7 @@
             </div>
         </section>
 
-        <!-- Section 2: About (Corrected: Reverted to text-only) -->
+        <!-- Section 2: About (Reverted to text-only) -->
         <section id="about" class="scroll-section flex items-center justify-center p-8 md:p-16" style="background-color: #f0f4f0;">
             <div class="max-w-4xl text-center">
                 <h2 class="text-4xl font-bold text-green-900 mb-8">About Me</h2>
@@ -111,7 +99,15 @@
             <div class="max-w-3xl w-full">
                 <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Experience</h2>
                 <div class="relative border-l-2 border-green-800/50 ml-4 pl-8 space-y-12">
-                    <!-- Timeline Item 1 -->
+                    <!-- Timeline Item 1 (MOVED UP) -->
+                    <div class="relative">
+                        <div class="absolute -left-[42px] top-1.5 w-4 h-4 bg-green-800 rounded-full ring-4 ring-slate-100"></div>
+                        <p class="text-sm text-gray-500">June 2025 - October 2025</p>
+                        <h3 class="text-xl font-bold text-gray-800 mt-1">Digitalization Project Lead & Data Engineer</h3>
+                        <p class="font-semibold text-green-800">The House of Wisdom</p>
+                        <p class="text-gray-600 mt-4">Led the development of a full-stack web app for 100+ users. Engineered ETL pipelines to track attendance for 300+ students and log hours for 50+ employees. Built dynamic dashboards with Python, Firebase, and Google Data Studio, enabling data-driven decisions that led to a 40% expansion of the organization's reach and increased administrative efficiency by over 50%. <b class="text-gray-700">Helped triple funding from $100k to $300k.</b></p>
+                    </div>
+                    <!-- Timeline Item 2 (MOVED DOWN) -->
                     <div class="relative">
                         <div class="absolute -left-[42px] top-1.5 w-4 h-4 bg-green-800 rounded-full ring-4 ring-slate-100"></div>
                         <p class="text-sm text-gray-500">October 2025 - Current</p>
@@ -119,63 +115,66 @@
                         <p class="font-semibold text-green-800">Trickfire Robotics (Student Organization)</p>
                         <p class="text-gray-600 mt-4">Developed autonomous navigation algorithms using Python, computer vision, and LiDAR data to enable real-time obstacle detection and path planning for a competition mars rover. Used OpenCV and ROS frameworks to process sensor input, improving object accuracy. Leveraged AI-powered solutions like Google Gemini to automate debugging and code generation, enhancing productivity by 30%.</p>
                     </div>
-                    <!-- Timeline Item 2 -->
-                    <div class="relative">
-                        <div class="absolute -left-[42px] top-1.5 w-4 h-4 bg-green-800 rounded-full ring-4 ring-slate-100"></div>
-                        <p class="text-sm text-gray-500">June 2025 - October 2025</p>
-                        <h3 class="text-xl font-bold text-gray-800 mt-1">Digitalization Project Lead & Data Engineer</h3>
-                        <p class="font-semibold text-green-800">The House of Wisdom</p>
-                        <p class="text-gray-600 mt-4">Led the development of a full-stack web app for 100+ users. Engineered ETL pipelines to track attendance for 300+ students and log hours for 50+ employees. Built dynamic dashboards with Python, Firebase, and Google Data Studio, enabling data-driven decisions that led to a 40% expansion of the organization's reach and increased administrative efficiency by over 50%, and <strong class="text-gray-700">helped triple funding from $100K to $300K.</strong></p>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Projects (UPDATED for horizontal scroll) -->
-        <section id="projects" class="scroll-section flex items-center justify-center p-8 md:p-16" style="background-color: #f0f4f0;">
-             <div class="max-w-5xl w-full">
-                <h2 class="text-4xl font-bold text-green-900 mb-4 text-center">Projects</h2>
-                
-                <!-- NEW: Scroll clarification text -->
-                <p class="text-center text-gray-500 italic mb-8 text-sm">Scroll right to see all projects &rarr;</V>
-                
-                <!-- Horizontal scroller container -->
-                <div class="no-scrollbar overflow-x-auto pb-4">
-                    <!-- Flex container for all project cards -->
-                    <div class="flex flex-nowrap gap-8">
-                        
-                        <!-- 1. Nara Project (Not clickable, as requested) -->
-                        <div class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-80 md:w-96 flex-shrink-0 h-full">
-                            <h3 class="text-xl font-bold text-gray-800">Nara: AI Sentiment Analysis (1st Place Hackathon Winner)</h3>
-                            <p class="text-gray-600 mt-4">Developed LLM-powered NLP pipelines to analyze sentiment across social media campaigns, extracting actionable insights for grassroots organizations. Built interactive React.js dashboards to visualize time-series metrics and engagement patterns, providing a fast, scalable alternative to traditional polling.</p>
-                            <span class="inline-block mt-4 text-sm font-semibold text-gray-500">(Internal project, not open source)</span>
-                        </div>
+        <!-- Section 4: Projects (Horizontal Scroll) -->
+        <section id="projects" class="scroll-section flex flex-col justify-center p-8 md:p-16" style="background-color: #f0f4f0;">
+             <div class="max-w-5xl w-full mx-auto">
+                 <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Projects</h2>
+                 
+                 <!-- Horizontal scrolling container -->
+                 <div class="flex overflow-x-auto gap-8 pb-8">
+                     
+                     <!-- Project 1: Nara (NOW CLICKABLE + clarification) -->
+                     <a href="https://www.linkedin.com/posts/taha-s-5171502b1_im-thrilled-to-share-that-over-this-weekend-activity-7384301005749829632-GXBf" target="_blank" rel="noopener noreferrer" class="group flex flex-col flex-shrink-0 w-80 md:w-96 block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                         <div>
+                             <h3 class="text-xl font-bold text-gray-800">Nara: AI Sentiment Analysis (1st Place Winner of Hackathon)</h3>
+                             <p class="text-gray-600 mt-4">Developed LLM-powered NLP pipelines to analyze sentiment across social media campaigns, extracting actionable insights for grassroots organizations. Built interactive React.js dashboards to visualize time-series metrics and engagement patterns, providing a fast, scalable alternative to traditional polling.</p>
+                         </div>
+                         <div class="mt-auto"> <!-- Pushes content below to the bottom of the card -->
+                             <p class="text-sm text-gray-500 mt-4 italic">(Closed-source)</p>
+                             <span class="inline-block mt-4 text-sm font-semibold text-green-800 group-hover:underline">View LinkedIn Post &rarr;</span>
+                         </div>
+                     </a>
 
-                        <!-- 2. EV Charging Project -->
-                        <a href="https://github.com/Tapawapa/EV-Charging-Optimization-Forecasting.git" target="_blank" rel="noopener noreferrer" class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-80 md:w-96 flex-shrink-0 h-full">
-                            <h3 class="text-xl font-bold text-gray-800">EV Charging Optimization & Forecasting</h3>
-                            <p class="text-gray-600 mt-4">Used EV charging data (400,000+ rows), OpenStreetMap geometry, and machine learning to identify charging deserts and optimal spots for expansion. Processed large datasets with Python and PostgreSQL (PostGIS), then applied XGBoost and Prophet models to predict demand and create Dash visualizations.</p>
+                     <!-- Project 2: EV Charging -->
+                     <a href="https://github.com/Tapawapa/EV-Charging-Optimization-Forecasting.git" target="_blank" rel="noopener noreferrer" class="group flex flex-col flex-shrink-0 w-80 md:w-96 block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                         <div>
+                             <h3 class="text-xl font-bold text-gray-800">EV Charging Optimization & Forecasting</h3>
+                             <p class="text-gray-600 mt-4">Used EV charging data (400,000+ rows), OpenStreetMap geometry, and machine learning to identify charging deserts and optimal spots for expansion. Processed large datasets with Python and PostgreSQL (PostGIS), then applied XGBoost and Prophet models to predict demand and create Dash visualizations.</p>
+                         </div>
+                         <div class="mt-auto">
                             <span class="inline-block mt-4 text-sm font-semibold text-green-800 group-hover:underline">View on GitHub &rarr;</span>
-                        </a>
-
-                        <!-- 3. Portfolio Optimization Project -->
-                        <a href="https://github.com/Tapawapa/Portfolio-Optimization-Risk-Analysis-Project" target="_blank" rel="noopener noreferrer" class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-80 md:w-96 flex-shrink-0 h-full">
-                            <h3 class="text-xl font-bold text-gray-800">Portfolio Optimization & Risk Analysis</h3>
-                            <p class="text-gray-600 mt-4">Optimized a stock portfolio by analyzing a decade of historical data from Yahoo Finance. Ran 50,000 Monte Carlo simulations to find optimal allocations. Generated Seaborn visualizations of the efficient frontier, highlighting the benefits of diversification and portfolios with the best risk-return profiles.</p>
+                         </div>
+                     </a>
+                     
+                     <!-- Project 3: Portfolio Optimization -->
+                     <a href="https://github.com/Tapawapa/Portfolio-Optimization-Risk-Analysis-Project" target="_blank" rel="noopener noreferrer" class="group flex flex-col flex-shrink-0 w-80 md:w-96 block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                         <div>
+                             <h3 class="text-xl font-bold text-gray-800">Portfolio Optimization & Risk Analysis</h3>
+                             <p class="text-gray-600 mt-4">Optimized a stock portfolio by analyzing a decade of historical data from Yahoo Finance. Ran 50,000 Monte Carlo simulations to find optimal allocations. Generated Seaborn visualizations of the efficient frontier, highlighting the benefits of diversification and portfolios with the best risk-return profiles.</p>
+                         </div>
+                         <div class="mt-auto">
                             <span class="inline-block mt-4 text-sm font-semibold text-green-800 group-hover:underline">View on GitHub &rarr;</span>
-                        </a>
-                        
-                        <!-- 4. Minimum Wage Project -->
-                        <a href="data:application/octet-stream;base64,UEJJWCBmaWxlIGNvbnRlbnQ=" download="MinimumWageReport.pbix" class="group block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-80 md:w-96 flex-shrink-0 h-full">
-                            <h3 class="text-xl font-bold text-gray-800">Minimum Wage Disparity</h3>
-                            <p class="text-gray-600 mt-4">Analyzed the disparity between the U.S. minimum wage and cost of living by modeling how wage trends would appear if indexed to inflation, using PostgreSQL and BLS data. Developed Power BI dashboards visualizing long-term affordability changes for housing, offering clear insights into economic trends.</p>
+                         </div>
+                     </a>
+                     
+                     <!-- Project 4: Minimum Wage -->
+                     <a href="data:application/octet-stream;base64,UEJJWCBmaWxlIGNvbnRlbnQ=" download="MinimumWageReport.pbix" class="group flex flex-col flex-shrink-0 w-80 md:w-96 block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                         <div>
+                             <h3 class="text-xl font-bold text-gray-800">Minimum Wage Disparity</h3>
+                             <p class="text-gray-600 mt-4">Analyzed the disparity between the U.S. minimum wage and cost of living by modeling how wage trends would appear if indexed to inflation, using PostgreSQL and BLS data. Developed Power BI dashboards visualizing long-term affordability changes for housing, offering clear insights into economic trends.</p>
+                         </div>
+                         <div class="mt-auto">
                             <span class="inline-block mt-4 text-sm font-semibold text-green-800 group-hover:underline">Download Report (.pbix) &rarr;</span>
-                        </a>
-
-                    </div> <!-- end flex container -->
-                </div> <!-- end scroller -->
-            </div>
-        </section>
+                         </div>
+                     </a>
+                     
+                 </div>
+             </div>
+         </section>
 
         <!-- Section 5: Skills -->
         <section id="skills" class="scroll-section flex items-center justify-center p-8 md:p-16 bg-slate-100">
@@ -184,7 +183,6 @@
                 <div class="flex flex-wrap justify-center gap-4">
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">SQL</span>
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn)</span>
-                    <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">React.js</span>
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">PowerBI</span>
                     <span class="bg-green-800 text-white font-semibold px-5 py-3 rounded-lg text-lg">Gemini Code Assist</span>
                     <span class="bg-white text-gray-800 font-semibold px-5 py-3 rounded-lg text-lg shadow-sm">Storytelling</span>
@@ -251,7 +249,6 @@
 
 </body>
 </html>
-
 
 
 
